@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		CCC7178C2C61AD0C00C22811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */; };
 		CCC7178E2C61AD0C00C22811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */; };
-		CCC717902C61AD0C00C22811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178F2C61AD0C00C22811 /* ViewController.swift */; };
+		CCC717902C61AD0C00C22811 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178F2C61AD0C00C22811 /* MainTabBarViewController.swift */; };
 		CCC717952C61AD0E00C22811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC717942C61AD0E00C22811 /* Assets.xcassets */; };
 		CCC717982C61AD0E00C22811 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CCC717972C61AD0E00C22811 /* Base */; };
+		CCC717A12C61B04600C22811 /* ExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC717A02C61B04600C22811 /* ExplorerViewController.swift */; };
+		CCC717A42C61B0CE00C22811 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC717A32C61B0CE00C22811 /* FavoriteViewController.swift */; };
+		CCC717A72C61B11C00C22811 /* TravelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC717A62C61B11C00C22811 /* TravelsViewController.swift */; };
+		CCC717AA2C61B16500C22811 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC717A92C61B16500C22811 /* MessageViewController.swift */; };
+		CCC717AD2C61B1A600C22811 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC717AC2C61B1A600C22811 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CCC717882C61AD0C00C22811 /* AirbnbcloneBootcampRenato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbcloneBootcampRenato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CCC7178F2C61AD0C00C22811 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCC7178F2C61AD0C00C22811 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		CCC717942C61AD0E00C22811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCC717972C61AD0E00C22811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCC717992C61AD0E00C22811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC717A02C61B04600C22811 /* ExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
+		CCC717A32C61B0CE00C22811 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		CCC717A62C61B11C00C22811 /* TravelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsViewController.swift; sourceTree = "<group>"; };
+		CCC717A92C61B16500C22811 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		CCC717AC2C61B1A600C22811 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,59 @@
 		CCC7178A2C61AD0C00C22811 /* AirbnbcloneBootcampRenato */ = {
 			isa = PBXGroup;
 			children = (
+				CCC717AB2C61B19300C22811 /* ProfileView */,
+				CCC717A82C61B14C00C22811 /* MessageView */,
+				CCC717A52C61B10700C22811 /* TravelsView */,
+				CCC717A22C61B0B600C22811 /* FavoriteView */,
+				CCC7179F2C61B01100C22811 /* ExplorerView */,
 				CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */,
 				CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */,
-				CCC7178F2C61AD0C00C22811 /* ViewController.swift */,
+				CCC7178F2C61AD0C00C22811 /* MainTabBarViewController.swift */,
 				CCC717942C61AD0E00C22811 /* Assets.xcassets */,
 				CCC717962C61AD0E00C22811 /* LaunchScreen.storyboard */,
 				CCC717992C61AD0E00C22811 /* Info.plist */,
 			);
 			path = AirbnbcloneBootcampRenato;
+			sourceTree = "<group>";
+		};
+		CCC7179F2C61B01100C22811 /* ExplorerView */ = {
+			isa = PBXGroup;
+			children = (
+				CCC717A02C61B04600C22811 /* ExplorerViewController.swift */,
+			);
+			path = ExplorerView;
+			sourceTree = "<group>";
+		};
+		CCC717A22C61B0B600C22811 /* FavoriteView */ = {
+			isa = PBXGroup;
+			children = (
+				CCC717A32C61B0CE00C22811 /* FavoriteViewController.swift */,
+			);
+			path = FavoriteView;
+			sourceTree = "<group>";
+		};
+		CCC717A52C61B10700C22811 /* TravelsView */ = {
+			isa = PBXGroup;
+			children = (
+				CCC717A62C61B11C00C22811 /* TravelsViewController.swift */,
+			);
+			path = TravelsView;
+			sourceTree = "<group>";
+		};
+		CCC717A82C61B14C00C22811 /* MessageView */ = {
+			isa = PBXGroup;
+			children = (
+				CCC717A92C61B16500C22811 /* MessageViewController.swift */,
+			);
+			path = MessageView;
+			sourceTree = "<group>";
+		};
+		CCC717AB2C61B19300C22811 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				CCC717AC2C61B1A600C22811 /* ProfileViewController.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCC717902C61AD0C00C22811 /* ViewController.swift in Sources */,
+				CCC717AD2C61B1A600C22811 /* ProfileViewController.swift in Sources */,
+				CCC717902C61AD0C00C22811 /* MainTabBarViewController.swift in Sources */,
+				CCC717A12C61B04600C22811 /* ExplorerViewController.swift in Sources */,
 				CCC7178C2C61AD0C00C22811 /* AppDelegate.swift in Sources */,
+				CCC717A42C61B0CE00C22811 /* FavoriteViewController.swift in Sources */,
+				CCC717A72C61B11C00C22811 /* TravelsViewController.swift in Sources */,
+				CCC717AA2C61B16500C22811 /* MessageViewController.swift in Sources */,
 				CCC7178E2C61AD0C00C22811 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
