@@ -9,18 +9,16 @@ import UIKit
 
 class TravelsViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("TravelsView viewWillAppear")
-    }
+    var screen: TravelsScreen?
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("TravelsView viewDidAppear")
+    override func loadView() {
+        screen = TravelsScreen()
+        view = screen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("TravelsView")
-        view.backgroundColor = .white
     }
     
 }

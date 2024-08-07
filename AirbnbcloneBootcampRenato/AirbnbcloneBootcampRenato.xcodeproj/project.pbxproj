@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC83037F2C63E0B40057FA6A /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83037E2C63E0B40057FA6A /* ProfileScreen.swift */; };
+		CC8303822C63E0D40057FA6A /* MessageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8303812C63E0D40057FA6A /* MessageScreen.swift */; };
+		CC8303852C63E0ED0057FA6A /* TravelsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8303842C63E0ED0057FA6A /* TravelsScreen.swift */; };
+		CC8303882C63E10B0057FA6A /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8303872C63E10B0057FA6A /* FavoriteScreen.swift */; };
+		CC83038B2C63E1240057FA6A /* ExplorerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83038A2C63E1240057FA6A /* ExplorerScreen.swift */; };
 		CCC7178C2C61AD0C00C22811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */; };
 		CCC7178E2C61AD0C00C22811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */; };
 		CCC717902C61AD0C00C22811 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178F2C61AD0C00C22811 /* MainTabBarViewController.swift */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC83037E2C63E0B40057FA6A /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		CC8303812C63E0D40057FA6A /* MessageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageScreen.swift; sourceTree = "<group>"; };
+		CC8303842C63E0ED0057FA6A /* TravelsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsScreen.swift; sourceTree = "<group>"; };
+		CC8303872C63E10B0057FA6A /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
+		CC83038A2C63E1240057FA6A /* ExplorerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerScreen.swift; sourceTree = "<group>"; };
 		CCC717882C61AD0C00C22811 /* AirbnbcloneBootcampRenato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbcloneBootcampRenato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +55,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC83037C2C63E0160057FA6A /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				CCC7178F2C61AD0C00C22811 /* MainTabBarViewController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		CC83037D2C63E08C0057FA6A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC83037E2C63E0B40057FA6A /* ProfileScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CC8303802C63E0B90057FA6A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC8303812C63E0D40057FA6A /* MessageScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CC8303832C63E0D80057FA6A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC8303842C63E0ED0057FA6A /* TravelsScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CC8303862C63E0F30057FA6A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC8303872C63E10B0057FA6A /* FavoriteScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		CC8303892C63E10F0057FA6A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CC83038A2C63E1240057FA6A /* ExplorerScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		CCC7177F2C61AD0C00C22811 = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +127,9 @@
 				CCC717A52C61B10700C22811 /* TravelsView */,
 				CCC717A22C61B0B600C22811 /* FavoriteView */,
 				CCC7179F2C61B01100C22811 /* ExplorerView */,
+				CC83037C2C63E0160057FA6A /* MainTabBarController */,
 				CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */,
 				CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */,
-				CCC7178F2C61AD0C00C22811 /* MainTabBarViewController.swift */,
 				CCC717942C61AD0E00C22811 /* Assets.xcassets */,
 				CCC717962C61AD0E00C22811 /* LaunchScreen.storyboard */,
 				CCC717992C61AD0E00C22811 /* Info.plist */,
@@ -82,6 +140,7 @@
 		CCC7179F2C61B01100C22811 /* ExplorerView */ = {
 			isa = PBXGroup;
 			children = (
+				CC8303892C63E10F0057FA6A /* Screen */,
 				CCC717A02C61B04600C22811 /* ExplorerViewController.swift */,
 			);
 			path = ExplorerView;
@@ -90,6 +149,7 @@
 		CCC717A22C61B0B600C22811 /* FavoriteView */ = {
 			isa = PBXGroup;
 			children = (
+				CC8303862C63E0F30057FA6A /* Screen */,
 				CCC717A32C61B0CE00C22811 /* FavoriteViewController.swift */,
 			);
 			path = FavoriteView;
@@ -98,6 +158,7 @@
 		CCC717A52C61B10700C22811 /* TravelsView */ = {
 			isa = PBXGroup;
 			children = (
+				CC8303832C63E0D80057FA6A /* Screen */,
 				CCC717A62C61B11C00C22811 /* TravelsViewController.swift */,
 			);
 			path = TravelsView;
@@ -106,6 +167,7 @@
 		CCC717A82C61B14C00C22811 /* MessageView */ = {
 			isa = PBXGroup;
 			children = (
+				CC8303802C63E0B90057FA6A /* Screen */,
 				CCC717A92C61B16500C22811 /* MessageViewController.swift */,
 			);
 			path = MessageView;
@@ -114,6 +176,7 @@
 		CCC717AB2C61B19300C22811 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				CC83037D2C63E08C0057FA6A /* Screen */,
 				CCC717AC2C61B1A600C22811 /* ProfileViewController.swift */,
 			);
 			path = ProfileView;
@@ -192,11 +255,16 @@
 				CCC717AD2C61B1A600C22811 /* ProfileViewController.swift in Sources */,
 				CCC717902C61AD0C00C22811 /* MainTabBarViewController.swift in Sources */,
 				CCC717A12C61B04600C22811 /* ExplorerViewController.swift in Sources */,
+				CC8303882C63E10B0057FA6A /* FavoriteScreen.swift in Sources */,
+				CC83038B2C63E1240057FA6A /* ExplorerScreen.swift in Sources */,
 				CCC7178C2C61AD0C00C22811 /* AppDelegate.swift in Sources */,
+				CC83037F2C63E0B40057FA6A /* ProfileScreen.swift in Sources */,
 				CCC717A42C61B0CE00C22811 /* FavoriteViewController.swift in Sources */,
 				CCC717A72C61B11C00C22811 /* TravelsViewController.swift in Sources */,
+				CC8303852C63E0ED0057FA6A /* TravelsScreen.swift in Sources */,
 				CCC717AA2C61B16500C22811 /* MessageViewController.swift in Sources */,
 				CCC7178E2C61AD0C00C22811 /* SceneDelegate.swift in Sources */,
+				CC8303822C63E0D40057FA6A /* MessageScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

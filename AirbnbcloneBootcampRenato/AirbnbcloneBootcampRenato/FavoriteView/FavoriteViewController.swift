@@ -9,18 +9,16 @@ import UIKit
 
 class FavoriteViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("FavoriteView viewWillAppear")
-    }
+    var screen: FavoriteScreen?
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("FavoriteView viewDidAppear")
+    override func loadView() {
+        screen = FavoriteScreen()
+        view = screen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("FavoriteView")
-        view.backgroundColor = .white
     }
     
 }

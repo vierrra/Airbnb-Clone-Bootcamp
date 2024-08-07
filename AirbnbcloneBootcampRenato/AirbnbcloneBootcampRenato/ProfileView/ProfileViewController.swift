@@ -9,18 +9,17 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("MessageView viewWillAppear")
-    }
+    var screen: ProfileScreen?
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("MessageView viewDidAppear")
+    override func loadView() {
+        screen = ProfileScreen()
+        view = screen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MessageView")
-        view.backgroundColor = .white
+       
     }
     
 }

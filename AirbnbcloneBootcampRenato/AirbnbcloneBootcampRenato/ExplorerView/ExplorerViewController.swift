@@ -9,18 +9,16 @@ import UIKit
 
 class ExplorerViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("ExplorerView viewWillAppear")
-    }
+    var screen: ExplorerScreen?
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("ExplorerView viewDidAppear")
+    override func loadView() {
+        screen = ExplorerScreen()
+        view = screen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ExplorerView")
-        view.backgroundColor = .white
     }
     
 }

@@ -9,19 +9,16 @@ import UIKit
 
 class MessageViewController: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("MessageView viewWillAppear")
-    }
+    var screen: MessageScreen?
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("MessageView viewDidAppear")
+    override func loadView() {
+        screen = MessageScreen()
+        view = screen
     }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MessageView")
-        view.backgroundColor = .white
     }
-    
 }
 
