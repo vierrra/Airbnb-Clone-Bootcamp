@@ -12,6 +12,7 @@
 		CC8303852C63E0ED0057FA6A /* TravelsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8303842C63E0ED0057FA6A /* TravelsScreen.swift */; };
 		CC8303882C63E10B0057FA6A /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8303872C63E10B0057FA6A /* FavoriteScreen.swift */; };
 		CC83038B2C63E1240057FA6A /* ExplorerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83038A2C63E1240057FA6A /* ExplorerScreen.swift */; };
+		CCC5D09E2C6A8BEB006C6378 /* UIViewLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5D09D2C6A8BEB006C6378 /* UIViewLayoutExtension.swift */; };
 		CCC7178C2C61AD0C00C22811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */; };
 		CCC7178E2C61AD0C00C22811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */; };
 		CCC717902C61AD0C00C22811 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178F2C61AD0C00C22811 /* MainTabBarViewController.swift */; };
@@ -30,6 +31,7 @@
 		CC8303842C63E0ED0057FA6A /* TravelsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsScreen.swift; sourceTree = "<group>"; };
 		CC8303872C63E10B0057FA6A /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		CC83038A2C63E1240057FA6A /* ExplorerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerScreen.swift; sourceTree = "<group>"; };
+		CCC5D09D2C6A8BEB006C6378 /* UIViewLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewLayoutExtension.swift; sourceTree = "<group>"; };
 		CCC717882C61AD0C00C22811 /* AirbnbcloneBootcampRenato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbcloneBootcampRenato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		CCC5D09C2C6A8B72006C6378 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CCC5D09D2C6A8BEB006C6378 /* UIViewLayoutExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CCC7177F2C61AD0C00C22811 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 				CCC717A22C61B0B600C22811 /* FavoriteView */,
 				CCC7179F2C61B01100C22811 /* ExplorerView */,
 				CC83037C2C63E0160057FA6A /* MainTabBarController */,
+				CCC5D09C2C6A8B72006C6378 /* Utils */,
 				CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */,
 				CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */,
 				CCC717942C61AD0E00C22811 /* Assets.xcassets */,
@@ -252,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC5D09E2C6A8BEB006C6378 /* UIViewLayoutExtension.swift in Sources */,
 				CCC717AD2C61B1A600C22811 /* ProfileViewController.swift in Sources */,
 				CCC717902C61AD0C00C22811 /* MainTabBarViewController.swift in Sources */,
 				CCC717A12C61B04600C22811 /* ExplorerViewController.swift in Sources */,

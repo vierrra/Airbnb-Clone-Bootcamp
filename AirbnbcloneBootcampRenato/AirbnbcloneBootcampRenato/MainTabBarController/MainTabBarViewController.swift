@@ -23,10 +23,11 @@ class MainTabBarViewController: UITabBarController {
     }
 
     private func createNavController(viewController: UIViewController, title: String, imageName: String) -> UINavigationController {
-      let navController = UINavigationController(rootViewController: viewController)
-      navController.tabBarItem.title = title
-      navController.tabBarItem.image = UIImage(systemName: imageName)
-      return navController
+        let navController = UINavigationController(rootViewController: viewController)
+        navController.tabBarItem.title = title
+        navController.tabBarItem.image = UIImage(systemName: imageName)
+        navController.isNavigationBarHidden = true
+        return navController
     }
 
     private func customizeTabBarAppearance() {
