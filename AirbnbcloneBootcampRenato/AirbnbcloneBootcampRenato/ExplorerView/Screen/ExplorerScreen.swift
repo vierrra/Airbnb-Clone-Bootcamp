@@ -12,7 +12,6 @@ class ExplorerScreen: UIView {
     lazy var searchBarView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
-        //view.clipsToBounds = true
         view.layer.cornerRadius = 30
         view.setupShadow()
         return view
