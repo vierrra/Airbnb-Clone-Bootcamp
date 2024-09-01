@@ -12,6 +12,9 @@
 		CC8303852C63E0ED0057FA6A /* TravelsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8303842C63E0ED0057FA6A /* TravelsScreen.swift */; };
 		CC8303882C63E10B0057FA6A /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8303872C63E10B0057FA6A /* FavoriteScreen.swift */; };
 		CC83038B2C63E1240057FA6A /* ExplorerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83038A2C63E1240057FA6A /* ExplorerScreen.swift */; };
+		CCBD64152C7D5CAC00012B5C /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBD64142C7D5CAC00012B5C /* CategoryCollectionViewCell.swift */; };
+		CCBE1A6A2C84D8E200523541 /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE1A692C84D8E200523541 /* ExplorerViewModel.swift */; };
+		CCBE1A6D2C84D9C300523541 /* TravelCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE1A6C2C84D9C300523541 /* TravelCategory.swift */; };
 		CCC5D09E2C6A8BEB006C6378 /* UIViewLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5D09D2C6A8BEB006C6378 /* UIViewLayoutExtension.swift */; };
 		CCC7178C2C61AD0C00C22811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */; };
 		CCC7178E2C61AD0C00C22811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7178D2C61AD0C00C22811 /* SceneDelegate.swift */; };
@@ -31,6 +34,9 @@
 		CC8303842C63E0ED0057FA6A /* TravelsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelsScreen.swift; sourceTree = "<group>"; };
 		CC8303872C63E10B0057FA6A /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		CC83038A2C63E1240057FA6A /* ExplorerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerScreen.swift; sourceTree = "<group>"; };
+		CCBD64142C7D5CAC00012B5C /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		CCBE1A692C84D8E200523541 /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
+		CCBE1A6C2C84D9C300523541 /* TravelCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCategory.swift; sourceTree = "<group>"; };
 		CCC5D09D2C6A8BEB006C6378 /* UIViewLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewLayoutExtension.swift; sourceTree = "<group>"; };
 		CCC717882C61AD0C00C22811 /* AirbnbcloneBootcampRenato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbcloneBootcampRenato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC7178B2C61AD0C00C22811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +111,39 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		CCBD64132C7D5C9400012B5C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CCBD64142C7D5CAC00012B5C /* CategoryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CCBE1A672C84D89500523541 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCBE1A692C84D8E200523541 /* ExplorerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCBE1A682C84D8A900523541 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC8303892C63E10F0057FA6A /* Screen */,
+				CCC717A02C61B04600C22811 /* ExplorerViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CCBE1A6B2C84D92C00523541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCBE1A6C2C84D9C300523541 /* TravelCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CCC5D09C2C6A8B72006C6378 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,8 +190,10 @@
 		CCC7179F2C61B01100C22811 /* ExplorerView */ = {
 			isa = PBXGroup;
 			children = (
-				CC8303892C63E10F0057FA6A /* Screen */,
-				CCC717A02C61B04600C22811 /* ExplorerViewController.swift */,
+				CCBE1A6B2C84D92C00523541 /* Model */,
+				CCBE1A682C84D8A900523541 /* ViewController */,
+				CCBE1A672C84D89500523541 /* ViewModel */,
+				CCBD64132C7D5C9400012B5C /* Cell */,
 			);
 			path = ExplorerView;
 			sourceTree = "<group>";
@@ -264,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC5D09E2C6A8BEB006C6378 /* UIViewLayoutExtension.swift in Sources */,
+				CCBD64152C7D5CAC00012B5C /* CategoryCollectionViewCell.swift in Sources */,
 				CCC717AD2C61B1A600C22811 /* ProfileViewController.swift in Sources */,
 				CCC717902C61AD0C00C22811 /* MainTabBarViewController.swift in Sources */,
 				CCC717A12C61B04600C22811 /* ExplorerViewController.swift in Sources */,
@@ -271,12 +313,14 @@
 				CC83038B2C63E1240057FA6A /* ExplorerScreen.swift in Sources */,
 				CCC7178C2C61AD0C00C22811 /* AppDelegate.swift in Sources */,
 				CC83037F2C63E0B40057FA6A /* ProfileScreen.swift in Sources */,
+				CCBE1A6D2C84D9C300523541 /* TravelCategory.swift in Sources */,
 				CCC717A42C61B0CE00C22811 /* FavoriteViewController.swift in Sources */,
 				CCC717A72C61B11C00C22811 /* TravelsViewController.swift in Sources */,
 				CC8303852C63E0ED0057FA6A /* TravelsScreen.swift in Sources */,
 				CCC717AA2C61B16500C22811 /* MessageViewController.swift in Sources */,
 				CCC7178E2C61AD0C00C22811 /* SceneDelegate.swift in Sources */,
 				CC8303822C63E0D40057FA6A /* MessageScreen.swift in Sources */,
+				CCBE1A6A2C84D8E200523541 /* ExplorerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

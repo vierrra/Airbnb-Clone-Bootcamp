@@ -9,6 +9,17 @@ import UIKit
 
 class ExplorerScreen: UIView {
     
+    init() {
+        super.init(frame: .zero)
+        backgroundColor = .white
+        self.buildViewHierarchy()
+        self.setupConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     lazy var searchBarView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -42,15 +53,20 @@ class ExplorerScreen: UIView {
         return label
     }()
     
-    init() {
-        super.init(frame: .zero)
-        backgroundColor = .white
-        self.buildViewHierarchy()
-        self.setupConstraints()
-    }
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
+        collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        return collectionView
+    }()
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public func configCollectionViewProtocols(_ delegate: UICollectionViewDelegate, _ datasource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = datasource
     }
     
     private func buildViewHierarchy() {
@@ -58,6 +74,7 @@ class ExplorerScreen: UIView {
         searchBarView.addSubview(searchIconImageView)
         searchBarView.addSubview(searchLabel)
         searchBarView.addSubview(searchDetailLabel)
+        addSubview(collectionView)
     }
     
     private func setupConstraints() {
@@ -69,5 +86,7 @@ class ExplorerScreen: UIView {
         searchLabel.anchor(top: searchBarView.topAnchor, leading: searchIconImageView.trailingAnchor , padding: UIEdgeInsets(top: 12, left: 8, bottom: 0, right: 0))
         
         searchDetailLabel.anchor(top: searchLabel.bottomAnchor, leading: searchIconImageView.trailingAnchor, trailing: searchBarView.trailingAnchor, padding: UIEdgeInsets(top: 2, left: 8, bottom: 0, right: 2))
+        
+        collectionView.anchor(top: searchBarView.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: CategoryCollectionViewCell.height))
     }
 }
