@@ -64,9 +64,29 @@ class ExplorerScreen: UIView {
         return collectionView
     }()
     
+    lazy var lineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGray
+        return view
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        // TO DO: Register cell
+        return tableView
+    }()
+    
     public func configCollectionViewProtocols(_ delegate: UICollectionViewDelegate, _ datasource: UICollectionViewDataSource) {
         collectionView.delegate = delegate
         collectionView.dataSource = datasource
+    }
+    
+    public func configTableViewProtocols(_ delegate: UITableViewDelegate, _ datasource: UITableViewDataSource) {
+        tableView.delegate = delegate
+        tableView.dataSource = datasource
     }
     
     private func buildViewHierarchy() {
@@ -75,6 +95,8 @@ class ExplorerScreen: UIView {
         searchBarView.addSubview(searchLabel)
         searchBarView.addSubview(searchDetailLabel)
         addSubview(collectionView)
+        addSubview(lineView)
+        addSubview(tableView)
     }
     
     private func setupConstraints() {
@@ -88,5 +110,9 @@ class ExplorerScreen: UIView {
         searchDetailLabel.anchor(top: searchLabel.bottomAnchor, leading: searchIconImageView.trailingAnchor, trailing: searchBarView.trailingAnchor, padding: UIEdgeInsets(top: 2, left: 8, bottom: 0, right: 2))
         
         collectionView.anchor(top: searchBarView.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: CategoryCollectionViewCell.height))
+        
+        lineView.anchor(top: collectionView.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, size: CGSize(width: 0, height: 0.3))
+        
+        tableView.anchor(top: lineView.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
     }
 }

@@ -21,6 +21,7 @@ class ExplorerViewController: UIViewController {
         super.viewDidLoad()
         
         screen?.configCollectionViewProtocols(self, self)
+        screen?.configTableViewProtocols(self, self)
         print("ExplorerView")
     }
 }
@@ -39,4 +40,27 @@ extension ExplorerViewController: UICollectionViewDelegateFlowLayout, UICollecti
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CategoryCollectionViewCell.calculateSize(title: viewModel.getTitle(indexPath))
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard viewModel.getSelectedCategoryIndex != indexPath.row else { return  }
+        
+        let oldIndexPath = IndexPath(row: viewModel.getSelectedCategoryIndex, section: 0)
+        viewModel.setNewSelectedCategory(indexPath: indexPath)
+        
+        collectionView.reloadItems(at: [oldIndexPath, indexPath])
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        
+    }
+}
+
+extension ExplorerViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+    
+    
 }

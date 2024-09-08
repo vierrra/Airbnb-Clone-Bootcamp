@@ -114,7 +114,8 @@
 		CCBD64132C7D5C9400012B5C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				CCBD64142C7D5CAC00012B5C /* CategoryCollectionViewCell.swift */,
+				CCC989192C8E45B7009071E8 /* CollectionView */,
+				CCC9891A2C8E45E8009071E8 /* TableView */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -232,6 +233,21 @@
 				CCC717AC2C61B1A600C22811 /* ProfileViewController.swift */,
 			);
 			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		CCC989192C8E45B7009071E8 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CCBD64142C7D5CAC00012B5C /* CategoryCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		CCC9891A2C8E45E8009071E8 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

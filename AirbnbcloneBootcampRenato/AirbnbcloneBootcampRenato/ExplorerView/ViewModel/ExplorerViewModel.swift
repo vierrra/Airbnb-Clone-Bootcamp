@@ -22,6 +22,10 @@ class ExplorerViewModel {
         TravelCategory(image: "snowflake", category: "Ártico"),
     ]
     
+    var getSelectedCategoryIndex: Int {
+        return categoryList.firstIndex(where: { $0.isSelected }) ?? 0
+    }
+    
     var numberOfItems: Int {
         return categoryList.count
     }
@@ -32,5 +36,13 @@ class ExplorerViewModel {
     
     func getTitle(_ indexPath: IndexPath) -> String {
         loadCurrentTravelCategory(indexPath).category
+    }
+    
+    func setNewSelectedCategory(indexPath: IndexPath) {
+        let selectedPosition = indexPath.row
+        
+        categoryList.indices.forEach { index in
+            categoryList[index].isSelected = index == selectedPosition
+        }
     }
 }
