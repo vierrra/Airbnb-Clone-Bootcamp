@@ -75,7 +75,7 @@ class ExplorerScreen: UIView {
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
-        // TO DO: Register cell
+        tableView.register(DestinationTableViewCell.self, forCellReuseIdentifier: DestinationTableViewCell.identifier)
         return tableView
     }()
     
@@ -113,6 +113,6 @@ class ExplorerScreen: UIView {
         
         lineView.anchor(top: collectionView.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, size: CGSize(width: 0, height: 0.3))
         
-        tableView.anchor(top: lineView.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
+        tableView.anchor(top: lineView.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
     }
 }

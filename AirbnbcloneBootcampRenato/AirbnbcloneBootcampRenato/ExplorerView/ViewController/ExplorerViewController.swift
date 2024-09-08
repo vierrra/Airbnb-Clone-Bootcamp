@@ -49,18 +49,17 @@ extension ExplorerViewController: UICollectionViewDelegateFlowLayout, UICollecti
         
         collectionView.reloadItems(at: [oldIndexPath, indexPath])
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        
     }
 }
 
 extension ExplorerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        viewModel.numberOfRowsPropertyData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: DestinationTableViewCell.identifier, for: indexPath) as? DestinationTableViewCell
+        
+        return cell ?? UITableViewCell()
     }
-    
-    
 }
