@@ -28,10 +28,11 @@ class DestinationTableViewCell: UITableViewCell {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .lightGray
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-        // TO DO: register cell
-        //collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: ContentCollectionViewCell.identifier)
+        collectionView.layer.cornerRadius = 8
+        collectionView.isPagingEnabled = true
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(DestinationImageCollectionViewCell.self, forCellWithReuseIdentifier: DestinationImageCollectionViewCell.identifier)
         return collectionView
     }()
     
@@ -83,7 +84,7 @@ class DestinationTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.text = "1.850 por noite"
+        label.text = "R$ 1.850 por noite"
         return label
     }()
     
@@ -130,7 +131,7 @@ class DestinationTableViewCell: UITableViewCell {
         contentView.addSubview(subTitleLabel)
         contentView.addSubview(periodLabel)
         contentView.addSubview(priceLabel)
-//        contentView.addSubview(likeButton)
+        contentView.addSubview(likeButton)
     }
     
     private func configConstraints() {
@@ -139,7 +140,7 @@ class DestinationTableViewCell: UITableViewCell {
         pageControl.anchor(bottom: collectionView.bottomAnchor)
         pageControl.centerXAnchor(xAnchor: collectionView.centerXAnchor)
         
-        statusLabel.anchor(top: collectionView.topAnchor, leading: collectionView.leadingAnchor, padding: UIEdgeInsets(top: 12, left: 12, bottom: 0, right: 0), size: CGSize(width: 80, height:25))
+        statusLabel.anchor(top: collectionView.topAnchor, leading: collectionView.leadingAnchor,  padding: UIEdgeInsets(top: 12, left: 12, bottom: 0, right: 0), size: CGSize(width: 80, height:25))
         
         titleLabel.anchor(top: collectionView.bottomAnchor, leading: collectionView.leadingAnchor, padding: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0))
         
@@ -151,16 +152,30 @@ class DestinationTableViewCell: UITableViewCell {
         
         periodLabel.anchor(top: subTitleLabel.bottomAnchor, leading: collectionView.leadingAnchor, padding: UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0))
         
-        priceLabel.anchor(top: periodLabel.bottomAnchor, leading: collectionView.leadingAnchor, bottom: contentView.bottomAnchor, padding: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0))
+        priceLabel.anchor(top: periodLabel.bottomAnchor, leading: collectionView.leadingAnchor, bottom: contentView.bottomAnchor, padding: UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0))
+        
+        likeButton.anchor(top: collectionView.topAnchor, trailing: collectionView.trailingAnchor, padding: UIEdgeInsets(top: 12, left: 0, bottom: 0, right: 12), size: CGSize(width: 34, height: 34))
     }
 }
 
-//extension DestinationTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        4
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        UICollectionViewCell()
-//    }
-//}
+extension DestinationTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DestinationImageCollectionViewCell.identifier, for: indexPath) as? DestinationImageCollectionViewCell else { return UICollectionViewCell()}
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.width)
+        pageControl.currentPage = Int(pageNumber)
+    }
+}

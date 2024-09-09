@@ -74,7 +74,6 @@ class ExplorerScreen: UIView {
         let tableView = UITableView()
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
         tableView.register(DestinationTableViewCell.self, forCellReuseIdentifier: DestinationTableViewCell.identifier)
         return tableView
     }()

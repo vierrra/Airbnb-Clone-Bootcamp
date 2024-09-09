@@ -28,6 +28,7 @@
 		CCC717AD2C61B1A600C22811 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC717AC2C61B1A600C22811 /* ProfileViewController.swift */; };
 		CCC9891C2C8E4C27009071E8 /* PropertyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC9891B2C8E4C27009071E8 /* PropertyDataModel.swift */; };
 		CCC9891E2C8E4D34009071E8 /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC9891D2C8E4D34009071E8 /* DestinationTableViewCell.swift */; };
+		CCEBEB2E2C8F2B1700D01AD2 /* DestinationImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBEB2D2C8F2B1700D01AD2 /* DestinationImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		CCC717AC2C61B1A600C22811 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CCC9891B2C8E4C27009071E8 /* PropertyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDataModel.swift; sourceTree = "<group>"; };
 		CCC9891D2C8E4D34009071E8 /* DestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationTableViewCell.swift; sourceTree = "<group>"; };
+		CCEBEB2D2C8F2B1700D01AD2 /* DestinationImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				CCBD64142C7D5CAC00012B5C /* CategoryCollectionViewCell.swift */,
+				CCEBEB2D2C8F2B1700D01AD2 /* DestinationImageCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				CCC7178C2C61AD0C00C22811 /* AppDelegate.swift in Sources */,
 				CC83037F2C63E0B40057FA6A /* ProfileScreen.swift in Sources */,
 				CCBE1A6D2C84D9C300523541 /* TravelCategory.swift in Sources */,
+				CCEBEB2E2C8F2B1700D01AD2 /* DestinationImageCollectionViewCell.swift in Sources */,
 				CCC717A42C61B0CE00C22811 /* FavoriteViewController.swift in Sources */,
 				CCC717A72C61B11C00C22811 /* TravelsViewController.swift in Sources */,
 				CCC9891C2C8E4C27009071E8 /* PropertyDataModel.swift in Sources */,
