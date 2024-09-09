@@ -27,6 +27,10 @@ class DestinationImageCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    public func setupCell(images: String) {
+        destinationImageView.image = UIImage(named: images)
+    }
+    
     private func setup() {
         buildViewHierarchy()
         configConstraints()

@@ -10,6 +10,7 @@ import UIKit
 class DestinationTableViewCell: UITableViewCell {
     
     static let identifier: String = String(describing: DestinationTableViewCell.self)
+    var images: [String] = []
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -43,15 +44,15 @@ class DestinationTableViewCell: UITableViewCell {
         return pageControl
     }()
     
-    lazy var statusLabel: UILabel = {
-        let label = UILabel()
+    lazy var statusLabel: PaddedLabel = {
+        let label = PaddedLabel()
         label.textColor = .black
         label.backgroundColor = .white
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 1
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10
-        label.textAlignment = .center
+        label.textInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         label.text = "Superhost"
         return label
     }()
@@ -116,6 +117,20 @@ class DestinationTableViewCell: UITableViewCell {
         print(#function)
     }
     
+    public func setupCell(data: PropertyDataModel) {
+        statusLabel.text = data.status
+        statusLabel.isHidden = data.status.isEmpty
+        images = data.images
+        titleLabel.text = data.title
+        ratingLabel.text = data.rating
+        subTitleLabel.text = data.subtitle
+        periodLabel.text = data.date
+        priceLabel.text = data.price
+        pageControl.numberOfPages = data.images.count
+        pageControl.isHidden = data.images.count == 1
+        collectionView.reloadData()
+    }
+    
     private func setup() {
         buildViewHierarchy()
         configConstraints()
@@ -140,7 +155,7 @@ class DestinationTableViewCell: UITableViewCell {
         pageControl.anchor(bottom: collectionView.bottomAnchor)
         pageControl.centerXAnchor(xAnchor: collectionView.centerXAnchor)
         
-        statusLabel.anchor(top: collectionView.topAnchor, leading: collectionView.leadingAnchor,  padding: UIEdgeInsets(top: 12, left: 12, bottom: 0, right: 0), size: CGSize(width: 80, height:25))
+        statusLabel.anchor(top: collectionView.topAnchor, leading: collectionView.leadingAnchor,  padding: UIEdgeInsets(top: 12, left: 12, bottom: 0, right: 0))
         
         titleLabel.anchor(top: collectionView.bottomAnchor, leading: collectionView.leadingAnchor, padding: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0))
         
@@ -160,11 +175,13 @@ class DestinationTableViewCell: UITableViewCell {
 
 extension DestinationTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DestinationImageCollectionViewCell.identifier, for: indexPath) as? DestinationImageCollectionViewCell else { return UICollectionViewCell()}
+        
+        cell.setupCell(images: images[indexPath.row])
         
         return cell
     }

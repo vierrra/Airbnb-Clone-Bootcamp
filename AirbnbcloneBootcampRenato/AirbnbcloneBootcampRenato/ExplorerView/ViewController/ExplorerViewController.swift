@@ -59,6 +59,7 @@ extension ExplorerViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DestinationTableViewCell.identifier, for: indexPath) as? DestinationTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentPropertyData(indexPath))
         
         return cell ?? UITableViewCell()
     }
