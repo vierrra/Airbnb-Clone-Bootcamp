@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExploreService {
+struct  ExploreService {
     
     static func getCategoryJsonCaio(completion: (Result<[TravelCategory], Error>) -> Void) {
       guard let url = Bundle.main.url(forResource: "category", withExtension: "json") else {
@@ -25,14 +25,17 @@ class ExploreService {
     }
     
     public func getCategoryJson(completion: @escaping (Result<[TravelCategory], Error>) -> Void) {
-        if  let url = Bundle.main.url(forResource: "category", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let categoryData: [TravelCategory] = try JSONDecoder().decode([TravelCategory].self, from: data)
-                completion(.success(categoryData))
-            } catch {
-                completion(.failure(error))
-            }
+        guard let url = Bundle.main.url(forResource: "category", withExtension: "json") else {
+            completion(.failure(NSError(domain: "falha ao encontrar o arquivo", code: 404, userInfo: [NSLocalizedDescriptionKey: "File not found."])))
+            return
+        }
+
+        do {
+            let data = try Data(contentsOf: url)
+            let categoryData = try JSONDecoder().decode([TravelCategory].self, from: data)
+            completion(.success(categoryData))
+        } catch {
+            completion(.failure(error))
         }
     }
 }
