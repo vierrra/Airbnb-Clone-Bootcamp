@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TravelCategory {
+struct TravelCategory: Codable {
     var image: String
     var category: String
     var isSelected: Bool = false

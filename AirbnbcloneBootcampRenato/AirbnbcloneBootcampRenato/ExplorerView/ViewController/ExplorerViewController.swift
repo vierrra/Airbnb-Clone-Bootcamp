@@ -20,9 +20,9 @@ class ExplorerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.fetchCategoryListMock()
         screen?.configCollectionViewProtocols(self, self)
         screen?.configTableViewProtocols(self, self)
-        print("ExplorerView")
     }
 }
 

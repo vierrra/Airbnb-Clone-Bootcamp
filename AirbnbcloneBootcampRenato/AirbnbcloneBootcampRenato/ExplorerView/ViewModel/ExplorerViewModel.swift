@@ -8,19 +8,10 @@
 import UIKit
 
 class ExplorerViewModel {
+    
+    private var service: ExploreService = ExploreService()
 
-    private var categoryList: [TravelCategory] = [
-        TravelCategory(image: "ticket", category: "Icônicos", isSelected: true),
-        TravelCategory(image: "house.and.flag.fill", category: "Chalés"),
-        TravelCategory(image: "beach.umbrella", category: "Em frente à praia"),
-        TravelCategory(image: "sun.horizon.fill", category: "Vistas incríveis"),
-        TravelCategory(image: "fireworks", category: "Castelos"),
-        TravelCategory(image: "flame", category: "Em alta"),
-        TravelCategory(image: "tree", category: "Ilhas"),
-        TravelCategory(image: "figure.pool.swim", category: "Lago"),
-        TravelCategory(image: "sailboat", category: "Barcos"),
-        TravelCategory(image: "snowflake", category: "Ártico"),
-    ]
+    private var categoryList: [TravelCategory] = []
     
     private var properties: [PropertyDataModel] = [
       PropertyDataModel(
@@ -144,6 +135,17 @@ class ExplorerViewModel {
           category: "Ártico"
       )
   ]
+    
+    public func fetchCategoryListMock() {
+        service.getCategoryJson { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.categoryList = success
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     var getSelectedCategoryIndex: Int {
         return categoryList.firstIndex(where: { $0.isSelected }) ?? 0
